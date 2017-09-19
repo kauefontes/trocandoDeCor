@@ -7,16 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   
-  myColor = "secondary"
-  colors =["primary","secondary","danger","light","dark","my-special-color"]
+  myColor = "#32db64"
+  colors =["#488aff","#32db64","#f53d3d","#f4f4f4","#222","#ffcc55"]
   color = 0;
 
   constructor(public navCtrl: NavController, private changeDetectorRef: ChangeDetectorRef) {}
 
   changeColor(){
-    this.myColor = this.colors[this.color];
+    this.myColor = "background-color:" + this.colors[this.color]+";";
     this.changeDetectorRef.detectChanges();
-    console.log(this.colors[this.color]);
+    console.log(this.myColor);
     this.color++;
     if (this.color > 5){
       this.color = 0;

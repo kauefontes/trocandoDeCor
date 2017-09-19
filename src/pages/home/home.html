@@ -6,7 +6,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <button class="btn" (click)="changeColor()">CHANGE COLOR</button>
-  <ion-label [color]="this.myColor" >TESTE DE COR</ion-label>
+<ion-content color="pink" padding>
+  <div class="div" [style]=this.myColor >
+    <button class="btn" (click)="changeColor()">CHANGE COLOR</button>
+  </div>
 </ion-content>
